@@ -1,0 +1,344 @@
+****************** COEN 242 Programming Assignment 1 *****************
+
+Group Members
+---------------------------------------------------------
+Shweta Kharat
+Vaishnavi Sabhahita
+*******************************************************
+
+Compile and Execute Instructions
+---------------------------------------------------------
+Below are the java files :
+Solution 1:
+	MostFreqWords.java - source code
+Solution 2:
+	KFrequentSubList.java - source code
+Solution 3:
+	KFrequentWords.java - source code
+
+1. Change the path of the input file in java files(1GB, 8GB, 32GB)
+2. Compile and run java files to get the output
+
+
+Problem Statement
+---------------------------------------------------------
+Design and Implement an efficient java code to determine 100 most frequent/repeated words
+in a given dataset. The objective here is to obtain the result with the least possible execution Time (or with the best performance on your computer).
+
+
+Results
+---------------------------------------------------------
+
+1GB output:
+
+the 4957347
+quot 4019526
+and 2368412
+ref 1754310
+title 1746646
+text 1397922
+page 1207771
+The 996005
+amp 991337
+User 978858
+for 947141
+format 874374
+name 859236
+was 830624
+model 827480
+revision 821314
+username 820876
+contributor 819041
+timestamp 817448
+sha 817382
+Category 808682
+comment 797945
+talk 751034
+com 745570
+http 740169
+www 663490
+that 631009
+of 630131
+date 622612
+with 595227
+style 571307
+from 531919
+parentid 523377
+url 501782
+align 493033
+cite 456926
+web 455670
+wiki 454243
+to 449580
+space 443070
+in 436829
+xml 411850
+preserve 409829
+wikitext 409064
+org 403892
+a 385917
+span 365410
+small 362847
+UTC 360531
+first 353740
+not 351725
+accessdate 351034
+Wikipedia 345778
+this 329722
+font 311350
+center 307623
+his 290743
+color 290435
+https 287567
+publisher 284105
+are 266245
+redirect 265340
+team 240785
+last 238248
+link 227374
+background 225640
+has 222766
+article 221274
+news 216518
+which 214197
+March 211062
+COIBot 209043
+left 207370
+were 204735
+image 202424
+have 198180
+but 197089
+August 196368
+also 191488
+you 189861
+File 185128
+s 185070
+flagicon 184494
+work 182584
+score 182393
+New 182140
+type 179205
+nbsp 179130
+April 176706
+html 173010
+discussion 172824
+year 171537
+deletion 169485
+class 167355
+December 166411
+yes 166395
+May 165017
+time 164982
+United 164769
+one 163217
+
+***********************
+8GB output:
+
+quot 35781237
+the 33134258
+and 16223542
+title 16091454
+ref 15354477
+text 13041323
+page 11160225
+User 9733638
+amp 8701027
+format 7964662
+model 7644744
+username 7637582
+revision 7625798
+contributor 7584282
+timestamp 7572708
+sha 7571519
+com 7557798
+Category 7537624
+comment 7345902
+The 7176111
+name 7151919
+for 7055861
+talk 6754879
+http 6417789
+www 6363833
+date 5800590
+style 5345658
+was 5325596
+align 4828861
+parentid 4776168
+url 4658025
+wiki 4248669
+web 4195474
+from 4188717
+cite 4131148
+space 4129321
+with 4127931
+that 4120270
+xml 3804824
+preserve 3793291
+wikitext 3788328
+org 3733134
+span 3371094
+small 3172143
+accessdate 3134504
+UTC 3084968
+Wikipedia 3074632
+first 2897455
+https 2896737
+center 2751759
+link 2738378
+not 2726778
+this 2645378
+color 2631453
+redirect 2601997
+COIBot 2587300
+publisher 2530433
+font 2446386
+team 2325142
+last 2151840
+background 2087742
+left 2084571
+news 2021864
+article 2017680
+domain 1995616
+are 1931376
+flagicon 1925588
+score 1827414
+his 1788402
+WUL 1719752
+has 1664444
+OtherLinks 1638076
+html 1625886
+you 1592283
+nbsp 1590692
+discussion 1572232
+work 1565808
+image 1561479
+class 1541812
+deletion 1537847
+New 1480568
+base 1452648
+File 1435828
+August 1397088
+have 1391131
+baseip 1390382
+basedomain 1390382
+May 1389372
+which 1353392
+United 1338471
+year 1337320
+but 1326483
+time 1313552
+July 1311232
+width 1299344
+also 1294410
+April 1272129
+March 1266920
+php 1265393
+wikipedia 1264750
+
+*************************************
+32GB output:
+
+the 142487086
+quot 131585830
+and 69220506
+title 61488231
+ref 51751180
+amp 49225842
+text 49075004
+page 43551751
+User 39032500
+http 31158548
+The 30290149
+format 30216932
+timestamp 29739717
+model 29146823
+revision 28976784
+contributor 28877146
+sha 28819730
+username 28732925
+for 28595464
+Category 28259946
+comment 28177273
+talk 27478425
+com 26699461
+www 25977261
+name 25490183
+was 22417581
+org 21679663
+parentid 20858357
+date 18870014
+that 17894127
+with 17732012
+style 17065159
+space 16651419
+from 16130333
+wiki 16005668
+align 15562284
+web 14532426
+xml 14515617
+preserve 14445312
+wikitext 14410739
+small 14201593
+url 13890427
+UTC 13541041
+cite 12501452
+Wikipedia 12328698
+php 11879395
+span 11633046
+wikipedia 11589677
+diff 11580424
+font 11522225
+this 11165250
+not 11119624
+index 11005113
+center 10860384
+redirect 10554647
+color 10069937
+first 10010916
+https 9793802
+link 9055291
+are 8897038
+accessdate 8849447
+COIBot 8317123
+publisher 8040208
+oldid 7981094
+article 7944509
+his 7939769
+image 7359849
+background 7167423
+html 7153250
+last 6915200
+has 6824392
+user 6524165
+news 6426159
+minor 6406500
+New 6332496
+United 6166300
+have 6161295
+nbsp 6146603
+which 6036545
+you 5956112
+left 5954204
+domain 5923750
+deletion 5912897
+type 5859906
+team 5827815
+but 5787673
+also 5590499
+archive 5512341
+discussion 5426820
+year 5413914
+flagicon 5339690
+Special 5202424
+time 5195381
+were 5120157
+sup 5077419
+other 5028623
+one 4964632
+class 4929818
+WUL 4891112
+May 4870008
+
+Note: Execution time are present in screen shots in report pdf.
+	Output files are present in Output Folder

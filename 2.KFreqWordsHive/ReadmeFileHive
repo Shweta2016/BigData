@@ -1,0 +1,51 @@
+************************************************
+STEPS:
+-	Create a database
+CREATE DATABASE WordFreq;
+-	Perform configuration tuning by setting execution engine, number of reducers, cost-based optimization, vectorization
+-- Execution engine
+SET hive.execution.engine;
+
+-- Vectorization
+set hive.vectorized.execution = ture;
+set hive.vectorized.execution.enabled = true;
+
+-- Cost based optimization (CBO)
+set hive.cbo.enable=true;
+set hive.compute.query.using.stats=true;
+set hive.stats.fetch.column.stats=true;
+set hive.stats.fetch.partition.stats=true;
+
+************************************************************
+-	Read text file from given location and store in external table
+CREATE EXTERNAL TABLE docs(words string)
+stored as textfile 
+LOCATION '/user/bigdata07/hive';
+-	Create table to store words separated by space and count of those words
+CREATE TABLE wordCount AS
+SELECT word, count(*) AS count FROM
+(SELECT explode(split(words, ' ')) AS word FROM docs) w
+GROUP BY word;
+-	Create index on above table
+CREATE INDEX indexCompact
+ON TABLE wordCount (word, count)
+AS 'org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler'
+WITH DEFERRED REBUILD;
+-	Execute select query to get 100 most frequent words
+SELECT * FROM wordCount 
+ORDER BY count DESC
+limit 100;
+-	Execute select query to get 100 most frequent words with length > 3
+SELECT * FROM wordCount 
+WHERE LENGTH(word) > 3
+ORDER BY count DESC
+limit 100;
+
+****************************************************************
+
+EXECUTION:
+-	Give the path of text file to test in MostFreqWords.sql file
+-	Set number of reducers to desired value in sql file or remove it to use default value
+-	Execute the sql script using command:
+hive -f MostFreqWords.sql
+-	Output contains the 100 most frequent words and 100 most frequent words with word length > 3
